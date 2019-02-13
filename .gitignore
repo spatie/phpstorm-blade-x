@@ -1,0 +1,5 @@
+gradle.properties
+out
+.gradle
+build
+gradle/

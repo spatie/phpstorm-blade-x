@@ -1,0 +1,24 @@
+<idea-plugin>
+    <id>be.spatie.blade-x</id>
+    <name>BladeX</name>
+    <vendor email="brent@spatie.be" url="https://spatie.be">Spatie</vendor>
+
+    <description><![CDATA[
+    Add support for the BladeX Spatie package
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.jetbrains.php</depends>
+    <depends>com.jetbrains.php.blade</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <languageInjector implementation="BladeXLanguageInjector"/>
+    </extensions>
+
+
+    <actions>
+    </actions>
+</idea-plugin>

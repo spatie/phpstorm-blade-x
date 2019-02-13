@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.2'
+}
+
+group 'be.spatie'
+version '0.1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile files('lib/blade.jar', 'lib/php.jar', 'lib/php-openapi.jar')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+intellij {
+    version '2018.3.4'
+}
+patchPluginXml {
+    changeNotes """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
+}
+
+publishPlugin {
+    username intellijPublishUsername
+    password intellijPublishPassword
+}
